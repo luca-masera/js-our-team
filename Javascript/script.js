@@ -46,12 +46,14 @@ for (let i = 0; i < arrayOggetti.length; i++){
     console.log(arrayOggetti[i].role);
     console.log(arrayOggetti[i].picture);    
     console.groupEnd();
-
+    
+    let picture = arrayOggetti[i].picture;
     const card = document.createElement ('div')
-    card.innerHTML = (arrayOggetti[i].name);
-    card.innerHTML = (arrayOggetti[i].role);
-    card.innerHTML = (arrayOggetti[i].picture);
-    dati.append (arrayOggetti[i].name);
-    dati.append (arrayOggetti[i].role);
-    dati.append (arrayOggetti[i].picture);
+    card.innerHTML = (arrayOggetti[i].name)  
+    card.innerHTML += (arrayOggetti[i].role)
+    card.innerHTML += (arrayOggetti[i].picture)
+    card.innerHTML += `<img src="/img/${picture}" />`
+    dati.append (card);
+    
+    
 }
