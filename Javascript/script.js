@@ -38,11 +38,20 @@ const arrayOggetti = [
     }
 ]
 
+const dati = document.getElementById('carta')
+
 for (let i = 0; i < arrayOggetti.length; i++){
     console.group();
     console.log(arrayOggetti[i].name);
     console.log(arrayOggetti[i].role);
-    console.log(arrayOggetti[i].picture);
-    
+    console.log(arrayOggetti[i].picture);    
     console.groupEnd();
+
+    const card = document.createElement ('div')
+    card.innerHTML = (arrayOggetti[i].name);
+    card.innerHTML = (arrayOggetti[i].role);
+    card.innerHTML = (arrayOggetti[i].picture);
+    dati.append (arrayOggetti[i].name);
+    dati.append (arrayOggetti[i].role);
+    dati.append (arrayOggetti[i].picture);
 }
